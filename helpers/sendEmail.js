@@ -14,5 +14,4 @@ const sendEmail = async (data) => {
     throw error;
   }
 };
-
 module.exports = sendEmail;

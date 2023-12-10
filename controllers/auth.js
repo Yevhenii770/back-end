@@ -35,6 +35,7 @@ const register = async (req, res) => {
   const verifyEmail = {
     to: email,
     subject: "Verify email",
+    text: "and easy to do anywhere, even with Node.js",
     html: `<a target="_blank" href="${BASE_URL}/api/auth/verify/${verificationCode}">Click verify email</a>`,
   };
   await sendEmail(verifyEmail);
@@ -73,6 +74,7 @@ const resendVerifyEmail = async (req, res) => {
   const verifyEmail = {
     to: email,
     subject: "Verify email",
+    text: "and easy to do anywhere, even with Node.js",
     html: `<a target="_blank" href="${BASE_URL}/api/auth/verify/${user.verificationCode}">Click verify email</a>`,
   };
   await sendEmail(verifyEmail);

@@ -4,7 +4,7 @@ const https = require("https");
 
 const job = new cron.CronJob("*/14 * * * *", function () {
   https
-    .get('https://back-end-2saw.onrender.com', (res) => {
+    .get('https://back-end-2saw.onrender.com/', (res) => {
       if (res.statusCode === 200) {
         console.log("Server restarted");
       } else {

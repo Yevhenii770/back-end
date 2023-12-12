@@ -1,7 +1,7 @@
-npm start — start the server in production mode
-npm run start:dev — start the server in development mode
-npm run lint — run code check execution with eslint, must be performed before each PR and fix all linter errors
-npm lint:fix - Same linter check, but with automatic fixes for simple errors
+- `npm start` &mdash; старт сервера в режимі production
+- `npm run start:dev` &mdash; старт сервера в режимі розробки (development)
+- `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
+- `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
 
 Api endpoints:
 

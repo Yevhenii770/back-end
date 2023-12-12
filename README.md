@@ -7,7 +7,7 @@ Api endpoints:
 
  Production server - https://back-end-2saw.onrender.com
 
--REGISTER
+
 POST - /api/auth/register
 {
     "name": "Yevhenii",
@@ -15,17 +15,17 @@ POST - /api/auth/register
     "password": "123456"
 }
 
--LOGIN
+
 POST - /api/auth/login
 {
     "email": "mail@gmail.com",
     "password": "123456"
 }
 
--CURRENT
+
 GET - /api/auth/current
 
--LOGOUT
+
 POST - /api/auth/logout
 
 

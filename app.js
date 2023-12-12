@@ -2,6 +2,7 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const job = require("./cron");
 
 const authRouter = require("./routes/api/auth");
 const contactsRouter = require("./routes/api/contacts");
@@ -27,5 +28,5 @@ app.use((err, req, res, next) => {
   const { status = 500, message = "Server error" } = err;
   res.status(status).json({ message });
 });
-
+job.start();
 module.exports = app;

@@ -4,6 +4,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const job = require("./cron");
 job.start();
+
+const productsRouter = require("./routes/api/products");
 const authRouter = require("./routes/api/auth");
 const contactsRouter = require("./routes/api/contacts");
 
@@ -17,6 +19,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
+app.use("/api/products", productsRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/contacts", contactsRouter);
 

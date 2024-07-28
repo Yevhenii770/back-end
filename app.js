@@ -24,7 +24,12 @@ app.use("/api/auth", authRouter);
 app.use("/api/contacts", contactsRouter);
 
 app.use((req, res) => {
-  res.status(404).json({ message: "Server is running / 404" });
+  res.setHeader("Content-Type", "text/html");
+  res.write("<html>");
+  res.write("<head><title>My first server</title></head>");
+  res.write("<body><h1>Hello from my Node JS server</h1></body>");
+  res.write("</html>");
+  res.end();
 });
 
 app.use((err, req, res, next) => {
